@@ -1,4 +1,3 @@
-
 zuul:
   routes: #定义服务转发规则
     item-service: #item-service这个名字是任意写的
@@ -8,10 +7,3 @@ zuul:
     order-service: #名字尽量和业务系统相关
       path: /order-service/** #匹配order-service的请求app-order服务
       serviceid: app-order
-hystrix:
-  command:
-    default:
-      execution:
-        isolation:
-          thread:
-            timeoutInMilliseconds: 6000
